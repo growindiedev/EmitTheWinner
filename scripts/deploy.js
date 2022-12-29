@@ -10,6 +10,9 @@ async function main() {
   const Contact = await hre.ethers.getContractFactory("Contact");
   const contact = await Contact.deploy();
   await contact.deployed;
+
+  console.log(`contract has been deployed to ${contact.address}`);
+  //0xe8ee6004B97355a6E620fB563c0ED7Ef6B463b05
 }
 
 main().catch((error) => {
